@@ -30,11 +30,18 @@ class App < Sinatra::Base
   private
 
   def twitter
+    # Twitter::REST::Client.new do |config|
+    #   config.consumer_key        = "BpbHvdxTiAWdgfMHsfdQsBd9O"
+    #   config.consumer_secret     = "0FVKBjqVzCr2LHeeVDNcsmM87Ie0kqiRlKeZLzN4Duf22zQ4gU"
+    #   config.access_token        = "32622651-ZQM1EQ8bkpJyjXVzFBGpIN3FzWtNMJZL6HB8KkA4O"
+    #   config.access_token_secret = "Z1FSfitCgl2CChwEDdroZChP7rcDH6i0jlDuL5LNaOomX"
+    # end
     Twitter::REST::Client.new do |config|
-      config.consumer_key        = "BpbHvdxTiAWdgfMHsfdQsBd9O"
-      config.consumer_secret     = "0FVKBjqVzCr2LHeeVDNcsmM87Ie0kqiRlKeZLzN4Duf22zQ4gU"
-      config.access_token        = "32622651-ZQM1EQ8bkpJyjXVzFBGpIN3FzWtNMJZL6HB8KkA4O"
-      config.access_token_secret = "Z1FSfitCgl2CChwEDdroZChP7rcDH6i0jlDuL5LNaOomX"
+      config.consumer_key        = ENV['TWITTER_CONSUMER_KEY']
+      config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
+      config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
+      config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
+
   end
 end

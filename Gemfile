@@ -6,6 +6,9 @@ ruby '2.0.0'
 # Web server
 gem 'puma'
 
+# Environment var
+gem 'dotenv'
+
 # Simple HTTP
 gem 'sinatra'
 
