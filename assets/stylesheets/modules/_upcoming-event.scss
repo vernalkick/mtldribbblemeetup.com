@@ -1,0 +1,33 @@
+// =============================================================================
+// UPCOMING EVENT
+// =============================================================================
+
+.upcoming-event__info {
+  list-style-type: none;
+  padding: 0;
+  margin: .5em 0 0;
+
+  @include media(tablet-up) {
+    font-size: 1.25em;
+  }
+}
+
+.upcoming-event__info__item {
+  display: inline-block;
+  color: #555;
+
+  & + & {
+    margin-left: 1em;
+  }
+}
+
+.upcoming-event__info__item a {
+  color: #555;
+}
+
+.upcoming-event__label {
+  font-weight: 300;
+  color: $pink;
+  margin-bottom: .5em;
+  display: block;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0">
+
+    <title>Montreal Dribbble Meetup</title>
+    <meta name="description" content="Montreal Dribbble Meetup">
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="event-name">MTL Dribbble Meetup</h1>
+      <div class="balls">
+        <div class="logo"></div>
+        <% people.shuffle.take(8).each_with_index do |person, index| %>
+          <a class="ball ball--<%= index + 1 %>" href="<%= person.uri %>">
+            <img src="<%= person.profile_image_uri(:original) %>" alt="<%= person.name %>" class="ball__image">
+            <span class="ball__name"><%= person.name %></span>
+          </a>
+        <% end %>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <% if event %>
+          <div class="upcoming-event">
+            <span class="upcoming-event__label">Next Event</span>
+            <h1 class="upcoming-event__date"><%= event['date'] %></h1>
+            <ul class="upcoming-event__info">
+              <li class="upcoming-event__info__item">6PM</li>
+              <li class="upcoming-event__info__item"><a href="<%= event['map_url'] %>"><%= event['location'] %></a></li>
+            </ul>
+          </div>
+        <% end %>
+
+        <p class="intro">Every few months or so, Montreal designers gather together for drinks, pizza and talks to share whatever they’ve been working on, get inspired by the city’s most creative people and just have fun with friends.</p>
+      </div>
+    </main>
+  </body>
+</html>

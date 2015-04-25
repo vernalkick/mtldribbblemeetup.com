@@ -1,0 +1,29 @@
+// =============================================================================
+// MEDIA QUERIES
+// =============================================================================
+
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$tablet: 750px;
+$desktop: 1000px;
+
+$queries: (
+  mobile: "(max-width: #{$tablet - 1})",
+  tablet-down: "(max-width: #{$desktop - 1})",
+  tablet: "(min-width: #{$tablet}) and (max-width: #{$desktop - 1})",
+  tablet-up: "(min-width: #{$tablet})",
+  desktop: "(min-width: #{$desktop})"
+);
+
+
+// MIXIN
+// -----------------------------------------------------------------------------
+
+@mixin media($name) {
+  $query: map-get($queries, $name);
+
+  @media #{$query} {
+    @content;
+  }
+}
