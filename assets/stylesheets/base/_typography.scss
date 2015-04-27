@@ -2,13 +2,24 @@
 // TYPOGRAPHY
 // =============================================================================
 
+$font-family: 'Roboto', sans-serif;
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
+}
+
+.link {
+  border-bottom: 2px solid $blue;
+  color: inherit;
+}
+
+p {
+  color: #999;
 }
 
 h1 {

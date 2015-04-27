@@ -35,11 +35,22 @@
               <li class="upcoming-event__info__item">6PM</li>
               <li class="upcoming-event__info__item"><a href="<%= event['map_url'] %>"><%= event['location'] %></a></li>
             </ul>
+            <a href="" class="btn">Register</a>
           </div>
         <% end %>
-
         <p class="intro">Every few months or so, Montreal designers gather together for drinks, pizza and talks to share whatever they’ve been working on, get inspired by the city’s most creative people and just have fun with friends.</p>
+        <form action="http://mtldribbblemeetup.us2.list-manage.com/subscribe/post?u=615cec0c99425a3896b685138&amp;id=54fa590810" method="post" class="subscribe-form" target="_blank" novalidate>
+          <input type="email" name="EMAIL" class="text-input" placeholder="Subscribe to know when the next one is coming" required autocapitalize="off" spellcheck="false">
+          <button type="submit" class="arrow-button">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#00B6E3"><path d="M9.824.38L8.488 1.702l7.547 7.547H.25v1.875h15.785l-7.547 7.547 1.336 1.324 9.81-9.808-9.81-9.81z"/></svg>
+          </button>
+       </form>
       </div>
     </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>The MTL Dribbble Meetup is organized by <a href="#" class="link">Kevin Clark</a>. I you'd like to help out, <a href="" class="link">get in touch</a>!</p>
+      </div>
+    </footer>
   </body>
 </html>

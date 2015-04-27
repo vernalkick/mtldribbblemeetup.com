@@ -1,0 +1,36 @@
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.text-input {
+  -webkit-font-smoothing: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: inherit;
+  font-size: inherit;
+  width: 21.5em;
+  padding-bottom: 1em;
+
+  &:focus {
+    outline: 0;
+    border-color: $blue;
+  }
+}
+
+.arrow-button {
+  vertical-align: middle;
+
+  &:hover svg {
+    fill: darken($blue, 15%);
+  }
+}
+
+.arrow-button svg {
+  transition: fill $duration $easing;
+}

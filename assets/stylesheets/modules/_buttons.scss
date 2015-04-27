@@ -1,0 +1,19 @@
+.btn {
+  background: $pink;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  border-radius: 4px;
+  padding: .75em 1.25em;
+  transition: background $duration $easing;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    background: darken($pink, 15%);
+  }
+}
