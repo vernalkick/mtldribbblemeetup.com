@@ -12,6 +12,7 @@
   margin: .5em 0 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   @include media(tablet-up) {
     font-size: 1.25em;
@@ -22,6 +23,7 @@
   display: flex;
   align-items: center;
   color: #555;
+  text-align: left;
 
   & + & {
     margin-left: 1em;
@@ -45,4 +47,10 @@
 
 .upcoming-event__btn {
   margin-top: 1.5em;
+}
+
+.address {
+  @include media(mobile) {
+    display: none;
+  }
 }

@@ -48,7 +48,7 @@
                     <circle cx="7.5" cy="7.5" r="2.5"/>
                   </g>
                 </svg>
-                <a href="<%= event['map_url'] %>"><%= event['location'] %></a>
+                <a href="<%= event['map_url'] %>"><%= event['location'] %> <span class="address">(<%= event['address'] %>)</span></a>
               </li>
             </ul>
             <% if event['rsvp'] %>
