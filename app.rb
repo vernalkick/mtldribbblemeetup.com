@@ -1,3 +1,4 @@
+require 'sinatra'
 require 'rest-client'
 
 class App < Sinatra::Base

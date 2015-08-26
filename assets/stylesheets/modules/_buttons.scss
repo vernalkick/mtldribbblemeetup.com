@@ -6,14 +6,25 @@
   font-family: inherit;
   font-size: inherit;
   border: none;
-  border-radius: 4px;
-  padding: .75em 1.25em;
+  border-radius: 6px;
+  padding: .85em 1.25em;
   transition: background $duration $easing;
   cursor: pointer;
   display: inline-block;
+  font-weight: 500;
 
   &:hover,
   &:focus {
     background: darken($pink, 15%);
+  }
+}
+
+.btn--alt {
+  background: rgba($pink, .2);
+  color: $pink;
+
+  &:hover,
+  &:focus {
+    background: rgba($pink, .3);
   }
 }

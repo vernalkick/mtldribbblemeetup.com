@@ -2,10 +2,16 @@
 // UPCOMING EVENT
 // =============================================================================
 
+.upcoming-event {
+  animation: fade-in-down 1s .3s backwards cubic-bezier(0.34,1.61,0.7,1);
+}
+
 .upcoming-event__info {
   list-style-type: none;
   padding: 0;
   margin: .5em 0 0;
+  display: flex;
+  justify-content: center;
 
   @include media(tablet-up) {
     font-size: 1.25em;
@@ -13,12 +19,17 @@
 }
 
 .upcoming-event__info__item {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   color: #555;
 
   & + & {
     margin-left: 1em;
   }
+}
+
+.upcoming-event__info__icon {
+  margin-right: .25em;
 }
 
 .upcoming-event__info__item a {
@@ -28,5 +39,10 @@
 .upcoming-event__label {
   color: $pink;
   margin-bottom: .5em;
+  font-weight: 500;
   display: block;
+}
+
+.upcoming-event__btn {
+  margin-top: 1.5em;
 }

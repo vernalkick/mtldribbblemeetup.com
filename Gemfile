@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Web server
-gem 'puma'
+# group :production do
+#   gem 'puma'
+# end
 
 # Environment var
 gem 'dotenv'

@@ -32,10 +32,29 @@
             <span class="upcoming-event__label">Next Event</span>
             <h1 class="upcoming-event__date"><%= event['date'] %></h1>
             <ul class="upcoming-event__info">
-              <li class="upcoming-event__info__item">6PM</li>
-              <li class="upcoming-event__info__item"><a href="<%= event['map_url'] %>"><%= event['location'] %></a></li>
+              <li class="upcoming-event__info__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="upcoming-event__info__icon">
+                  <g transform="translate(1 1)" stroke="#434343" stroke-width="2" fill="none" fill-rule="evenodd">
+                    <circle cx="9" cy="9" r="9"/>
+                    <path d="M9 3.5v5l2.958 2.533" stroke-linecap="square"/>
+                  </g>
+                </svg>
+                <span>6PM</span>
+              </li>
+              <li class="upcoming-event__info__item">
+                <svg width="17" height="22" xmlns="http://www.w3.org/2000/svg" class="upcoming-event__info__icon">
+                  <g transform="translate(1 1)" stroke="#434343" stroke-width="2" fill="none" fill-rule="evenodd">
+                    <path d="M6.21 18.526c.713.84 1.88.84 2.58 0 0 0 6.21-6.884 6.21-11.026C15 3.358 11.642 0 7.5 0 3.358 0 0 3.358 0 7.5c0 4.142 6.21 11.026 6.21 11.026z"/>
+                    <circle cx="7.5" cy="7.5" r="2.5"/>
+                  </g>
+                </svg>
+                <a href="<%= event['map_url'] %>"><%= event['location'] %></a>
+              </li>
             </ul>
-            <a href="" class="btn">Register</a>
+            <% if event['rsvp'] %>
+              <a href="<%= event['rsvp'] %>" class="upcoming-event__btn btn">RSVP on Eventbrite</a>
+            <% end %>
+            <a href="<%= event['map_url'] %>" class="upcoming-event__btn btn btn--alt">View Map</a>
           </div>
         <% end %>
         <p class="intro">Every few months or so, Montreal designers gather together for drinks, pizza and talks to share whatever they’ve been working on, get inspired by the city’s most creative people and just have fun with friends.</p>
@@ -52,7 +71,7 @@
         <p>The MTL Dribbble Meetup is organized by <a href="#" class="link">Kevin Clark</a>. I you'd like to help out, <a href="" class="link">get in touch</a>!</p>
       </div>
     </footer>
-    
+
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
