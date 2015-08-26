@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0">
 
     <title>Montreal Dribbble Meetup</title>
-    <meta name="description" content="Montreal Dribbble Meetup">
+    <meta name="description" content="Montreal Dribbble Meetup<% if event %>: <%= event['date'] %><% end %>">
 
     <link rel="stylesheet" href="assets/styles.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+
+    <meta property="og:url" content="http://mtldribbblemeetup.com" />
+    <meta property="og:title" content="Montreal Dribbble Meetup<% if event %>: <%= event['date'] %><% end %>" />
+    <meta property="og:description" content="<%= @description %>" />
+    <meta property="og:image" content="http://cl.ly/image/1P0h1n0p0E2H/1" />
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -66,7 +71,7 @@
             <a href="<%= event['map_url'] %>" class="upcoming-event__btn btn btn--alt">View Map</a>
           </div>
         <% end %>
-        <p class="intro">Every few months or so, Montreal designers gather together for drinks, pizza and talks to share whatever they’ve been working on, get inspired by the city’s most creative people and just have fun with friends.</p>
+        <p class="intro"><%= @description %></p>
         <form action="http://mtldribbblemeetup.us2.list-manage.com/subscribe/post?u=615cec0c99425a3896b685138&amp;id=54fa590810" method="post" class="subscribe-form" target="_blank" novalidate>
           <input type="email" name="EMAIL" class="text-input" placeholder="Subscribe to know when the next one is coming" required autocapitalize="off" spellcheck="false">
           <button type="submit" class="arrow-button">
