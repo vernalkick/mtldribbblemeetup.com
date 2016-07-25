@@ -8,7 +8,7 @@ class App < Sinatra::Base
 
   get '/' do
     @people = twitter.users(people)
-    @description = "Every few months or so, Montreal designers gather together for drinks, pizza and talks to share whatever they’ve been working on, get inspired by the city’s most creative people and just have fun with friends."
+    @description = "Every few months or so, Montreal designers gather together to see talks from industry experts, share what they’ve been working on and get inspired by the city’s most creative people."
 
     latest_event = events.last
     last_event_date = Date.parse(latest_event['date'])
